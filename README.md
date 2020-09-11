@@ -36,14 +36,12 @@ def wishMe():
 
 def takeCommand():
     # It takes microphone input from user and returns string output
-
     r = sr.Recognizer()
     with sr.Microphone() as source:
         clear()
         print("Listening....\r", end="")
         r.pause_threshold = 1
         audio = r.listen(source)  # it converts the audio input into string
-
     try:
         clear()
         print("Recognizing...\r", end="")
@@ -112,9 +110,8 @@ if __name__ == '__main__':
     while True:
         # if 1:
         query = takeCommand().lower()
-
-        # Logic for executing tasks based on query
-        if "how are you" in query:
+# Logic for executing tasks based on query
+  if "how are you" in query:
             speak("I'm fine sir, how can i help you ?")
         elif "who are you" in query:
             speak("I'm jarvis desktop assistant made by Mr Darshan Chanchad")
